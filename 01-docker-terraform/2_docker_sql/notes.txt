@@ -1,0 +1,46 @@
+Lesson 1.2.1 - Introduction to docker
+
+- how to run a docker image
+  * docker run -it hello-world
+  * docker run -it ubuntu bash
+- how to create a Dockerfile
+  
+TODO:
+
+- build a new docker image using Dockerfile
+  * docker build -t imagename:tagname
+
+Lesson 1.2.2 - Ingesting NY Taxi Data to Postgres
+
+- how to run a new postgres application in a docker container
+ * docker run -it -e POSTGRES_USER="root" -e POSTGRES_PASSWORD="password" -e POSTGRES_DB="ny_taxi" -v ny_taxi_postgres_data:/var/lib/postgresql/data -p 5432:5432 postgres:17
+- how to connect to the said DB
+  - download pgcli 
+  * pgcli -h 0.0.0.0 -p 5432 -u root -p password -d ny_taxi
+- how to load csv data into DB using python
+  * use pandas to load csv data into dataframe
+  * use sqlalachemy to insert df into postgres db
+
+TODO 
+* download postgres docker
+* Download the ny taxi
+
+Lesson 1.2.3 - Connecting pgAdmin and postgres
+
+- pgAdmin is a GUI tool for PostGresSQL
+  * Download the pgadmin docker
+- how to connect pgadmin container to postgres db container 
+  * docker network create pgnetwork
+  * docker run -it -e POSTGRES_USER="root" -e POSTGRES_PASSWORD="password" -e POSTGRES_DB="ny_taxi" -v ny_taxi_postgres_data:/var/lib/postgresql/data -p 5432:5432 --network pgnetwork --name pgdatabase postgres:17
+  
+
+Lesson 1.2.4 - Dockerizing the ingestion script
+- how to containerize the ingestion of data from web to postgres table (as seen in Lesson 1.2.2)
+  * create a python script 
+  * create a Dockerfile
+
+Lesson 1.2.5 - Docker-Compose
+- docker-compose is used to initiate multiple containers
+
+
+

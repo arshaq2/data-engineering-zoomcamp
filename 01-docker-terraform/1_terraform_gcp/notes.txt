@@ -1,0 +1,3 @@
+Lesson 1.3.1 - Terraform Primer
+
+- Terraform is a infrastructure-as-code tool to manage cloud services
