@@ -1,0 +1,42 @@
+create gcp key credentials
+save key in a json file
+
+installed terraform extension in vs code
+
+created main.tf file
+searched for terraform google provider
+added the provider in the main.tf f
+
+terraform fmt to format main.tf
+
+get projectid and added in the provider object in main
+
+added credentials json path in the gcp provider 
+alternate way is to add an environment variable to the path of the creds.json
+
+ran terraform init - initializes with provider details
+
+created a bucket in gcp by adding resource object
+
+resource object is defined by type (google_storage_bucket) and a name.
+
+ran terraform plan: gives the actions that will be taken when the main.tf folder is run
+
+ran terraform apply: executes the actions defined in the tf file and crates a state file
+
+ran terraform destroy: will remove the resources created in terraform apply.
+
+==========================================================================
+
+Creating a BigQuery Dataset:
+
+referred terraform documentation to create a resource
+
+variables:
+variables store values which can be used in other .tf files 
+
+These variables can then be referenced using var.<variable_name>
+
+functions:
+function to perform certain actions
+

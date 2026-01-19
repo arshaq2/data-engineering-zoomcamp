@@ -1,0 +1,52 @@
+1. Docker 
+- containerization service to provide a system inside another system
+docker run 
+docker run -it ubuntu
+docker run -it python:3.13.11
+docker run -it python:3.13.11-slim 
+
+python:3.13.11
+image:tag
+
+docker run -it --entrypoint=bash python:3.13.11-slim to open bash instead of python shell
+
+? docker containers are stateless
+
+docker ps -aq -> to show running docker containers
+
+docker rm `docker ps -aq` -> to remove docker containers
+
+volumes : to share files between host machine and docker containers
+docker run -it -v host_path:container_path
+
+
+## Data pipeline ##
+
+data pipeline takes input data and process it and outputs the processed data
+
+uv to use virtual environment
+
+Dockerfile
+
+docker build -t image:tag <Dockerfile destination>
+
+Postgres image to set up a postgres db 
+
+Pandas to read data from the csv/parquet files of nyc taxi data
+
+sqlalchemy to work with SQL data in pandas
+
+? psycogp2 
+
+insert data from csv to db in batches
+
+? Click (apparently it's a python package)
+
+docker network
+
+
+pgadmin
+
+docker compose
+
+
