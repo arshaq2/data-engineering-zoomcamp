@@ -17,3 +17,6 @@ serving_dir
 *.parquet
 *.csv
 practice/
+*homework/main.py
+**uv.lock
+*.toml
