@@ -1,0 +1,15 @@
+What is workflow orchestration?
+
+Orchestration -> arranging pieces to provide a desired output. 
+
+Needs a conductor/orchestrator to help arrange the piecs. Kestra is one such orchestrator.
+
+What is Kestra?
+
+Open source workflow orchestrator. Language agnostic. Huge plugin library. 
+
+Kestra intro
+
+Triggers: either scheduled trigger or event based
+
+
